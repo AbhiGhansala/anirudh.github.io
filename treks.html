@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/treks.css">
+  <title>Choose Card with Expandable Options & Scroll</title>
+</head>
+<body>
+  <!-- navbar -->
+ <nav class="navbar">
+  <ul class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="treks.html" class="nav-link">Treks</a></li>
+    <li><a href="services.html" class="nav-link">Services</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- navbar ends here -->
+   <!-- Video background container -->
+  <div class="video-background-container">
+    <video id="background-video" autoplay muted loop playsinline>
+      <source src="images/bg.mp4" type="video/webm" />
+      <source src="images/bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <div class="page-container">
+    <div class="choose-card" id="chooseCard" tabindex="0" aria-label="Choose trekking categories">
+      <!-- Option - Trek By Name -->
+      <div class="option" data-name="trek-by-name">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="trek-by-name-suboptions">
+          Trek By Name
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="trek-by-name-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="treks/everest-base-camp.html">Everest Base Camp</div>
+          <div class="sub-option" data-url="treks/annapurna-circuit.html">Annapurna Circuit</div>
+          <div class="sub-option" data-url="treks/kilimanjaro.html">Kilimanjaro</div>
+          <div class="sub-option" data-url="treks/inca-trail.html">Inca Trail</div>
+          <div class="sub-option" data-url="treks/appalachian-trail.html">Appalachian Trail</div>
+        </div>
+      </div>
+
+      <!-- Option - Months -->
+      <div class="option" data-name="months">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="months-suboptions">
+          Months
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="months-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="months/january.html">January</div>
+          <div class="sub-option" data-url="months/april.html">April</div>
+          <div class="sub-option" data-url="months/july.html">July</div>
+          <div class="sub-option" data-url="months/october.html">October</div>
+          <div class="sub-option" data-url="months/december.html">December</div>
+        </div>
+      </div>
+
+      <!-- Option - Difficulty -->
+      <div class="option" data-name="difficulty">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="difficulty-suboptions">
+          Difficulty
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="difficulty-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="difficulty/easy.html">Easy</div>
+          <div class="sub-option" data-url="difficulty/moderate.html">Moderate</div>
+          <div class="sub-option" data-url="difficulty/hard.html">Hard</div>
+          <div class="sub-option" data-url="difficulty/extreme.html">Extreme</div>
+        </div>
+      </div>
+
+      <!-- Option - Region -->
+      <div class="option" data-name="region">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="region-suboptions">
+          Region
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="region-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="region/asia.html">Asia</div>
+          <div class="sub-option" data-url="region/europe.html">Europe</div>
+          <div class="sub-option" data-url="region/south-america.html">South America</div>
+          <div class="sub-option" data-url="region/africa.html">Africa</div>
+          <div class="sub-option" data-url="region/north-america.html">North America</div>
+        </div>
+      </div>
+
+      <!-- Option - Season -->
+      <div class="option" data-name="season">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="season-suboptions">
+          Season
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="season-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="season/spring.html">Spring</div>
+          <div class="sub-option" data-url="season/summer.html">Summer</div>
+          <div class="sub-option" data-url="season/autumn.html">Autumn</div>
+          <div class="sub-option" data-url="season/winter.html">Winter</div>
+        </div>
+      </div>
+
+      <!-- Option - Interests -->
+      <div class="option" data-name="interests">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="interests-suboptions">
+          Interests
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="interests-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="interests/wildlife.html">Wildlife</div>
+          <div class="sub-option" data-url="interests/culture.html">Culture</div>
+          <div class="sub-option" data-url="interests/photography.html">Photography</div>
+          <div class="sub-option" data-url="interests/adventure.html">Adventure</div>
+        </div>
+      </div>
+
+      <!-- Option - Theme -->
+      <div class="option" data-name="theme">
+        <div class="option-header" tabindex="0" aria-expanded="false" role="button" aria-controls="theme-suboptions">
+          Theme
+          <span class="arrow">▶</span>
+        </div>
+        <div class="sub-options" id="theme-suboptions" aria-hidden="true">
+          <div class="sub-option" data-url="theme/spiritual.html">Spiritual</div>
+          <div class="sub-option" data-url="theme/historic.html">Historic</div>
+          <div class="sub-option" data-url="theme/nature.html">Nature</div>
+          <div class="sub-option" data-url="theme/challenging.html">Challenging</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="js/treks.js"></script>
+</html>
