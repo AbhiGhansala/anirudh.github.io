@@ -1,0 +1,188 @@
+ * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden; /* Avoid scroll on body due to video */
+    }
+     /* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #00e676; /* green hover */
+  color: black;
+}
+
+.nav-link.active {
+  background-color: #00e676; /* green active */
+  color: black;
+}
+    /* Container for video and overlay */
+    .video-background-container {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      overflow: hidden;
+      z-index: -2;
+    }
+    /* Fullscreen video */
+    #background-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7); /* Slight darkening to improve overlay */
+    }
+    /* Optional overlay to darken background for readability */
+    .overlay {
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1;
+    }
+
+    /* Container for entire page content */
+    .page-container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 40px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      /* keep scroll for card */
+    }
+
+
+    /* Card container from before */
+    .choose-card {
+      width: 350px;
+      max-height: 800px;
+      background: transparent;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      overflow-y: hidden;
+      padding: 20px;
+      padding-top: 100px;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      user-select: none;
+    }
+
+    /* Main option container */
+    .option {
+      border: 1.5px solid #00e676;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      background-color: #e8f5e9;
+      user-select: none;
+    }
+    .option:hover {
+      box-shadow: 0 0 12px #00e676aa;
+      border-color: #007a33;
+    }
+
+    /* Header of each option */
+    .option-header {
+      padding: 14px 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #007a33;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      user-select: none;
+    }
+
+    /* Arrow icon */
+    .arrow {
+      font-size: 20px;
+      transition: transform 0.3s ease;
+      color: #007a33;
+      user-select: none;
+    }
+
+    /* Rotate arrow when expanded */
+    .option.expanded .arrow {
+      transform: rotate(90deg);
+    }
+
+    /* Sub-options container */
+    .sub-options {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      background-color: #d0efd0;
+      border-top: 1px solid #00e676;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* When expanded */
+    .option.expanded .sub-options {
+      padding: 12px 20px 16px;
+      max-height: 500px;
+    }
+
+    /* Each sub-option */
+    .sub-option {
+      padding: 10px 8px;
+      font-size: 16px;
+      color: #004d00;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      user-select: none;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .sub-option:last-child {
+      margin-bottom: 0;
+    }
+    .sub-option:hover {
+      background-color: #00e676;
+      color: #002100;
+      font-weight: 600;
+    }
+
+    /* Scrollbar styling for modern browsers */
+    .choose-card::-webkit-scrollbar {
+      width: 8px;
+    }
+    .choose-card::-webkit-scrollbar-thumb {
+      background-color: #00e676cc;
+      border-radius: 4px;
+    }
+    .choose-card::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
