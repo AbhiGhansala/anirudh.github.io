@@ -59,7 +59,7 @@ a{
 .slider{
     height: 100vh;
     margin-top: -50px;
-    width: 100vw;
+    width: fit-content;
     overflow: hidden;
     position: relative;
 }
